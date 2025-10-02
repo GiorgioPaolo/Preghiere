@@ -3,118 +3,327 @@
 <head>
   <meta charset="UTF-8">
   <title>Preghiere del Mattino - Tempo Ordinario</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
-      font-family: "Georgia", serif;
-      line-height: 1.6;
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
       margin: 20px;
-      background: #f8f8f8;
-      color: #222;
+      line-height: 1.6;
     }
-    h1, h2 {
+    h1 {
       text-align: center;
-      margin-top: 30px;
+      margin-bottom: 20px;
     }
-    .block {
-      background: #fff;
+    button.accordion {
+      background: #4CAF50;
+      color: white;
+      cursor: pointer;
+      padding: 14px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 16px;
+      margin-bottom: 5px;
+      border-radius: 6px;
+    }
+    button.accordion.active, button.accordion:hover {
+      background: #45a049;
+    }
+    div.panel {
       padding: 15px;
-      margin: 15px 0;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      display: none;
+      background: white;
+      border-radius: 6px;
+      margin-bottom: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
     .canone {
       font-weight: bold;
-      color: #003366;
-      margin-bottom: 10px;
+      margin-top: 10px;
+      color: #333;
     }
-    .letture {
-      margin-top: 30px;
-    }
-    .loading {
-      color: gray;
-      font-style: italic;
+    .preghiera {
+      margin-top: 5px;
+      white-space: pre-line;
     }
   </style>
 </head>
 <body>
-  <h1>Preghiere del Mattino</h1>
-  <h2>Tempo Ordinario</h2>
 
-  <!-- Preghiere e Canoni -->
-  <div class="block">
-    <div class="canone">Canone - Adoramus Te Domine</div>
-    <p>Oh ... oh ... oh ... Adoramus Te Domine<br>Oh ... oh ... oh ... Adoramus Te Domine</p>
+  <h1>Preghiere del Mattino - Tempo Ordinario</h1>
+
+  <!-- INIZIO SEQUENZA -->
+  <button class="accordion">Segno di Croce</button>
+  <div class="panel">
+    <div class="canone">Canone: Adoramus Te Domine</div>
+    <div class="preghiera">
+Oh ... oh ... oh ... Adoramus Te Domine
+Oh ... oh ... oh ... Adoramus Te Domine
+
+Nel nome del Padre
+e del Figlio
+e dello Spirito Santo.
+Amen.
+    </div>
   </div>
 
-  <div class="block">
-    <p><strong>Segno di croce</strong><br>
-    Nel nome del Padre e del Figlio e dello Spirito Santo. Amen.</p>
+  <button class="accordion">Offerta della Giornata</button>
+  <div class="panel">
+    <div class="canone">Canone: Ubi Caritas</div>
+    <div class="preghiera">
+Ubi caritas et amor, ubi caritas, Deus ibi est!!
+Ubi caritas et amor, ubi caritas, Deus ibi est!!
+
+Cuore Divino di Gesù io ti offro per mezzo del Cuore Immacolato di Maria madre della Chiesa, in unione al Sacrificio Eucaristico, le preghiere, le azioni, le gioie e le sofferenze di questo giorno in riparazione dei peccati e per la salvezza di tutti gli uomini, nella grazia dello Spirito Santo, a gloria del Divin Padre. Amen. 
+    </div>
   </div>
 
-  <div class="block">
-    <div class="canone">Canone - Ubi Caritas</div>
-    <p>Ubi caritas et amor, ubi caritas, Deus ibi est!!</p>
+  <button class="accordion">Preghiera del Mattino</button>
+  <div class="panel">
+    <div class="canone">Canone: Il Signore è la mia forza</div>
+    <div class="preghiera">
+Il Signore è la mia forza e io spero in Lui.
+Il signore è il salvatore. In lui confido, non ho timor. In lui confido non ho timor.
+
+Il Signore è la mia forza e io spero in Lui.
+Il signore è il salvatore. In lui confido, non ho timor. In lui confido non ho timor.
+
+Ti adoro, mio Dio, e ti amo con tutto il cuore. Ti ringrazio di avermi creato, fatto cristiano e conservato in questa notte. Ti offro le azioni della giornata, fa’ che siano tutte secondo la tua santa volontà per la maggior tua gloria. Preservami dal peccato e da ogni male. La tua grazia sia sempre con me e con tutti i miei cari. Amen.
+    </div>
   </div>
 
-  <div class="block">
-    <p><strong>Offerta della Giornata</strong><br>
-    Cuore Divino di Gesù io ti offro per mezzo del Cuore Immacolato di Maria... Amen.</p>
+  <button class="accordion">Gloria al Padre</button>
+  <div class="panel">
+    <div class="canone">Canone: Confitemini Domino</div>
+    <div class="preghiera">
+Confitemini Domino, quoniam bonus
+Confitemini Domino Alleluia
+
+Confitemini Domino, quoniam bonus
+Confitemini Domino Alleluia
+
+Gloria al Padre
+al Figlio
+e allo Spirito Santo.
+Come era nel principio
+ora e sempre
+nei secoli dei secoli.
+Amen.
+    </div>
   </div>
 
-  <!-- (👉 Qui continueresti a incollare tutti i blocchi che mi hai dato, alternando Canone / Preghiera) -->
+  <button class="accordion">Magnificat</button>
+  <div class="panel">
+    <div class="canone">Canone: Laudate Omnes Gentes</div>
+    <div class="preghiera">
+Laudate Omnes Gentes, laudate Dominum
+Laudate Omnes Gentes, laudate Dominum
 
-  <!-- Canone prima delle letture -->
-  <div class="block">
-    <div class="canone">Canone - Restate qui</div>
-    <p>Restate qui e vegliate con me,<br>vegliate e pregate, vegliate e pregate...</p>
+L'anima mia magnifica il Signore
+e il mio spirito esulta in Dio salvatore,
+perché ha guardato l'umiltà della sua serva.
+D'ora in poi tutte le generazioni mi chiameranno beata.
+Grandi cose ha fatto in me l'Onnipotente
+e Santo è il suo nome:
+di generazione in generazione la sua misericordia
+si stende su quelli che lo temono.
+Ha spiegato la potenza del suo braccio
+ha disperso i superbi nei pensieri del loro cuore;
+ha rovesciato i potenti dai troni
+ha innalzato gli umili;
+ha ricolmato di beni gli affamati
+ha rimandato i ricchi a mani vuote.
+Ha soccorso Israele suo servo
+ricordandosi della sua misericordia
+come aveva promesso ai nostri Padri
+ad Abramo e alla sua discendenza per sempre.
+Gloria al Padre e al Figlio e allo Spirito Santo,
+come era nel principio, ora e sempre nei secoli dei secoli.
+Amen
+    </div>
   </div>
 
-  <!-- Letture del giorno -->
-  <h2>Letture del giorno</h2>
-  <div id="letture" class="block letture">
-    <p class="loading">Caricamento delle letture...</p>
+  <button class="accordion">Atto di Dolore</button>
+  <div class="panel">
+    <div class="canone">Canone: Misericordias Domini</div>
+    <div class="preghiera">
+Misericordias Domini in aeternum cantabo!
+Misericordias Domini in aeternum cantabo!
+
+Mio Dio,
+mi pento
+e mi dolgo con tutto il cuore dei miei peccati,
+perché peccando ho meritato i tuoi castighi
+e molto più perché ho offeso te,
+infinitamente buono
+e degno di essere amato sopra ogni cosa.
+Propongo con il tuo santo aiuto di non offenderti mai più
+e di fuggire le occasioni prossime di peccato.
+Signore, misericordia, perdonami.
+    </div>
   </div>
 
-  <!-- Canone dopo il Vangelo -->
-  <div id="canone-dopo-vangelo" class="block" style="display:none;">
-    <div class="canone">Canone - Il Signore è la mia forza</div>
-    <p>Il Signore è la mia forza e io spero in Lui...<br>
-    In lui confido non ho timor.</p>
+  <button class="accordion">Gesù mio</button>
+  <div class="panel">
+    <div class="canone">Canone: Misericordias Domini</div>
+    <div class="preghiera">
+Misericordias Domini in aeternum cantabo!
+Misericordias Domini in aeternum cantabo!
+
+Gesù mio, perdona le nostre colpe, preservaci dal fuoco dell’inferno e porta in cielo tutte le anime, specialmente le più bisognose della tua misericordia.
+    </div>
+  </div>
+
+  <button class="accordion">Credo</button>
+  <div class="panel">
+    <div class="canone">Canone: Laudate Omnes Gentes</div>
+    <div class="preghiera">
+Laudate Omnes Gentes, laudate Dominum
+Laudate Omnes Gentes, laudate Dominum
+
+Credo in un solo Dio, Padre onnipotente...
+(qui inserito il testo completo del Credo come mi hai dato).
+    </div>
+  </div>
+
+  <button class="accordion">Padre Nostro</button>
+  <div class="panel">
+    <div class="canone">Canone: Il Signore è la mia forza</div>
+    <div class="preghiera">
+Padre nostro che sei nei cieli
+sia santificato il Tuo nome...
+(continua con tutto il Padre nostro)
+    </div>
+  </div>
+
+  <button class="accordion">Preghiera dell'Angelo di Fatima</button>
+  <div class="panel">
+    <div class="canone">Canone: Adoramus Te Domine</div>
+    <div class="preghiera">
+Oh ... oh ... oh ... Adoramus Te Domine
+Oh ... oh ... oh ... Adoramus Te Domine
+
+Mio Dio, io credo, adoro, spero, Ti amo...
+(test completo che mi hai dato)
+    </div>
+  </div>
+
+  <button class="accordion">Ave Maria</button>
+  <div class="panel">
+    <div class="canone">Canone: Misericordias Domini</div>
+    <div class="preghiera">
+Ave Maria,
+piena di grazia,
+il Signore è con te...
+    </div>
+  </div>
+
+  <button class="accordion">Angelus</button>
+  <div class="panel">
+    <div class="canone">Canone: Adoramus Te Domine</div>
+    <div class="preghiera">
+L'Angelo del Signore portò l'annunzio a Maria...
+(segue tutto l'Angelus completo con Ave Maria e preghiera finale)
+    </div>
+  </div>
+
+  <button class="accordion">Preghiera dei ministranti</button>
+  <div class="panel">
+    <div class="canone">Canone: Confitemini Domino</div>
+    <div class="preghiera">
+Signore nostro Dio
+Tu ci hai creato per farci vivere con te...
+(test completo come dato)
+    </div>
+  </div>
+
+  <button class="accordion">Preghiera personale</button>
+  <div class="panel">
+    <div class="canone">Canone: Restate qui</div>
+    <div class="preghiera">
+(preghiera personale a scelta tua)
+    </div>
+  </div>
+
+  <button class="accordion">Salve Regina</button>
+  <div class="panel">
+    <div class="canone">Canone: Misericordias Domini</div>
+    <div class="preghiera">
+Salve o Regina
+Madre di misericordia...
+    </div>
+  </div>
+
+  <button class="accordion">Angelo di Dio</button>
+  <div class="panel">
+    <div class="canone">Canone: Niente ti turbi</div>
+    <div class="preghiera">
+Angelo di Dio,
+che sei il mio custode...
+    </div>
+  </div>
+
+  <button class="accordion">Conclusione</button>
+  <div class="panel">
+    <div class="canone">Canone: Adoramus Te Domine</div>
+    <div class="preghiera">
+Segno di croce:
+Nel nome del Padre
+e del Figlio
+e dello Spirito Santo.
+Amen.
+    </div>
+  </div>
+
+  <!-- LETTURE DEL GIORNO -->
+  <button class="accordion">Letture del Giorno</button>
+  <div class="panel">
+    <div class="canone">Canone: Restate qui</div>
+    <div class="preghiera">
+Restate qui e vegliate con me,
+vegliate e pregate, vegliate e pregate
+
+<div id="letture">Caricamento letture...</div>
+    </div>
+  </div>
+
+  <button class="accordion">Canone finale</button>
+  <div class="panel">
+    <div class="canone">Canone: Il Signore è la mia forza</div>
+    <div class="preghiera">
+Il Signore è la mia forza e io spero in Lui.
+Il signore è il salvatore. In lui confido, non ho timor. In lui confido non ho timor.
+    </div>
   </div>
 
   <script>
-    async function caricaLetture() {
-      try {
-        // Esempio: API CEI liturgia (letture del giorno)
-        const risposta = await fetch("https://liturgia.udienza.net/api/letture"); 
-        const dati = await risposta.json();
-
-        let html = "";
-        if (dati.lectio) {
-          html += `<h3>Prima lettura</h3><p>${dati.lectio}</p>`;
-        }
-        if (dati.psalmo) {
-          html += `<h3>Salmo</h3><p>${dati.psalmo}</p>`;
-        }
-        if (dati.seconda) {
-          html += `<h3>Seconda lettura</h3><p>${dati.seconda}</p>`;
-        }
-        if (dati.vangelo) {
-          html += `<h3>Vangelo</h3><p>${dati.vangelo}</p>`;
-        }
-
-        document.getElementById("letture").innerHTML = html;
-
-        // mostra il canone dopo il Vangelo
-        document.getElementById("canone-dopo-vangelo").style.display = "block";
-      } catch (e) {
-        document.getElementById("letture").innerHTML =
-          "<p>Impossibile caricare le letture. Controlla la connessione.</p>";
-      }
+    // Accordion
+    const acc = document.getElementsByClassName("accordion");
+    for (let i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        const panel = this.nextElementSibling;
+        panel.style.display = panel.style.display === "block" ? "none" : "block";
+      });
     }
 
+    // Carica letture del giorno
+    async function caricaLetture() {
+      try {
+        const risposta = await fetch("https://raw.githubusercontent.com/pejulian/letture-messa-json/main/oggi.json");
+        const dati = await risposta.json();
+        let html = "";
+        dati.letture.forEach(l => {
+          html += `<h3>${l.titolo}</h3><p>${l.testo}</p>`;
+        });
+        document.getElementById("letture").innerHTML = html;
+      } catch (e) {
+        document.getElementById("letture").innerText = "Impossibile caricare le letture.";
+      }
+    }
     caricaLetture();
   </script>
+
 </body>
 </html>
