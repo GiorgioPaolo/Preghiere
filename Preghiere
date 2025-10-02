@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Preghiere del Mattino - Tempo Ordinario</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: "Georgia", serif;
+      line-height: 1.6;
+      margin: 20px;
+      background: #f8f8f8;
+      color: #222;
+    }
+    h1, h2 {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .block {
+      background: #fff;
+      padding: 15px;
+      margin: 15px 0;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .canone {
+      font-weight: bold;
+      color: #003366;
+      margin-bottom: 10px;
+    }
+    .letture {
+      margin-top: 30px;
+    }
+    .loading {
+      color: gray;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <h1>Preghiere del Mattino</h1>
+  <h2>Tempo Ordinario</h2>
+
+  <!-- Preghiere e Canoni -->
+  <div class="block">
+    <div class="canone">Canone - Adoramus Te Domine</div>
+    <p>Oh ... oh ... oh ... Adoramus Te Domine<br>Oh ... oh ... oh ... Adoramus Te Domine</p>
+  </div>
+
+  <div class="block">
+    <p><strong>Segno di croce</strong><br>
+    Nel nome del Padre e del Figlio e dello Spirito Santo. Amen.</p>
+  </div>
+
+  <div class="block">
+    <div class="canone">Canone - Ubi Caritas</div>
+    <p>Ubi caritas et amor, ubi caritas, Deus ibi est!!</p>
+  </div>
+
+  <div class="block">
+    <p><strong>Offerta della Giornata</strong><br>
+    Cuore Divino di Gesù io ti offro per mezzo del Cuore Immacolato di Maria... Amen.</p>
+  </div>
+
+  <!-- (👉 Qui continueresti a incollare tutti i blocchi che mi hai dato, alternando Canone / Preghiera) -->
+
+  <!-- Canone prima delle letture -->
+  <div class="block">
+    <div class="canone">Canone - Restate qui</div>
+    <p>Restate qui e vegliate con me,<br>vegliate e pregate, vegliate e pregate...</p>
+  </div>
+
+  <!-- Letture del giorno -->
+  <h2>Letture del giorno</h2>
+  <div id="letture" class="block letture">
+    <p class="loading">Caricamento delle letture...</p>
+  </div>
+
+  <!-- Canone dopo il Vangelo -->
+  <div id="canone-dopo-vangelo" class="block" style="display:none;">
+    <div class="canone">Canone - Il Signore è la mia forza</div>
+    <p>Il Signore è la mia forza e io spero in Lui...<br>
+    In lui confido non ho timor.</p>
+  </div>
+
+  <script>
+    async function caricaLetture() {
+      try {
+        // Esempio: API CEI liturgia (letture del giorno)
+        const risposta = await fetch("https://liturgia.udienza.net/api/letture"); 
+        const dati = await risposta.json();
+
+        let html = "";
+        if (dati.lectio) {
+          html += `<h3>Prima lettura</h3><p>${dati.lectio}</p>`;
+        }
+        if (dati.psalmo) {
+          html += `<h3>Salmo</h3><p>${dati.psalmo}</p>`;
+        }
+        if (dati.seconda) {
+          html += `<h3>Seconda lettura</h3><p>${dati.seconda}</p>`;
+        }
+        if (dati.vangelo) {
+          html += `<h3>Vangelo</h3><p>${dati.vangelo}</p>`;
+        }
+
+        document.getElementById("letture").innerHTML = html;
+
+        // mostra il canone dopo il Vangelo
+        document.getElementById("canone-dopo-vangelo").style.display = "block";
+      } catch (e) {
+        document.getElementById("letture").innerHTML =
+          "<p>Impossibile caricare le letture. Controlla la connessione.</p>";
+      }
+    }
+
+    caricaLetture();
+  </script>
+</body>
+</html>
